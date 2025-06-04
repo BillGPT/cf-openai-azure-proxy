@@ -10,8 +10,8 @@ ENV WRANGLER_SEND_METRICS=false
 ENV DEPLOY_NAME_GPT35=""
 ENV DEPLOY_NAME_GPT4=""
 
-# 复制 Workers 脚本到镜像
-COPY cf-openai-azure-proxy.js .
+# 复制源代码到镜像
+COPY . .
 
 # 启动本地开发服务器
-CMD wrangler dev cf-openai-azure-proxy.js --local --var RESOURCE_NAME:$RESOURCE_NAME DEPLOY_NAME_GPT35:$DEPLOY_NAME_GPT35 DEPLOY_NAME_GPT4:$DEPLOY_NAME_GPT4
+CMD wrangler dev main.js --local --var RESOURCE_NAME:$RESOURCE_NAME DEPLOY_NAME_GPT35:$DEPLOY_NAME_GPT35 DEPLOY_NAME_GPT4:$DEPLOY_NAME_GPT4

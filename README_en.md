@@ -9,7 +9,7 @@ This script proxies requests to Azure OpenAI Service for OpenAI clients. The cod
 
 Register and log in to your Cloudflare account.
 - Create a new Cloudflare Worker.
-- Copy and paste cf-openai-azure-proxy.js into the Cloudflare Worker editor.
+- Copy and paste `main.js` and files under the `src` directory into the Cloudflare Worker editor.
 - Adjust the values of **resourceName** and deployment **mapper** by either direct modification or using environment variables..
 - Save and deploy the Cloudflare Worker.
 - https://github.com/haibbo/cf-openai-azure-proxy/issues/3 Optional: Bind a custom domain name: Add a custom domain name for this worker in the Worker details page -> Trigger -> Custom Domains.
